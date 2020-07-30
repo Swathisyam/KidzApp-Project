@@ -1,0 +1,42 @@
+<div class="card">
+    <form  #adminTask ="ngForm" (ngSubmit)="AddNumber()" >
+       <!-- <form [formGroup]="Addform" >  -->
+        <!-- <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="productItem.productId" > -->
+        <div class="card-header" style="font-size: larger;">
+            <!-- {{title}} -->
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td> <label> Number Id</label></td>
+                            <td><input type="text" name="p_id"  [(ngModel)]="numberItem.numberId" ></td>
+                        </tr>
+                        <tr>
+                            <td> <label> Number</label></td>
+                            <td><input type="text" name="p_name" [(ngModel)]="numberItem.numberImageUrl"></td>
+                        </tr>
+                        <tr>
+                            <td><label> Words</label></td>
+                            <td><input type="text" name="p_names"  [(ngModel)]="numberItem.numberWords"></td>
+                        </tr>
+                        <tr>
+                            <td> <label> Image</label></td>
+                            <td><input type="text" name="p_code"  [(ngModel)]="numberItem.imageUrl"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Submit"></td>
+                            <!-- <button type ="submit" class="btn btn-success" [disabled]='Addform.invalid' *ngIf="btnvisibility" (click)="AddNumber()">Save</button>   -->
+                            <!-- <button type ="submit" class="btn btn-primary" [disabled]='Addform.invalid' *ngIf="!btnvisibility" (click)="onSubmit('UpdateNumber')">Update</button>   -->
+                            <!-- <td><input type="submit" [disabled]='adminTask.form.invalid' *ngIf="btnvisibility" (click)="AddNumber()"></td>
+                            <td><input type="submit" [disabled]='adminTask.form.invalid' *ngIf="!btnvisibility" (click)="EditNumber(_id)"></td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>

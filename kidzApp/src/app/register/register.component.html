@@ -1,0 +1,38 @@
+<div class="py-5">
+    
+        <div style="text-align: center;">
+            <h1 class="form-signin-heading">Register Here</h1>
+              <!-- <p class="lead">Want you a member?  </p> -->
+        </div>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <span class="anchor" id="form-register"></span>
+            <!-- form card register  -->
+            <div class="card rounded-0">
+                <div class="card-header" style="background-color: green;">
+                    <!-- <h3 class="mb-0">Sign Up</h3> -->
+                </div>
+                <div class="card-body">
+                    <form class="form" #userRegister="ngForm">
+                        <div class="form-group">
+                            <label for="uname1">Full Name</label> <br>
+                            <input type="text" #name="ngModel" [(ngModel)]="regUser.name" name="name" id="name"  class="form-control rounded-0"  required>
+                        </div>
+                        <div class="form-group">
+                            <label for="uname1">Username</label> <br>
+                            <input type="" #email="ngModel" [(ngModel)]="regUser.email" name="email" id="email" [class.is-invalid]="email.invalid && email.touched" class="form-control rounded-0" pattern ="^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$" required>
+                            <small class="text-danger" [class.d-none]='email.valid || email.touched'>Enter a valid Email</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password</label> <br>
+                            <input type="password" #password="ngModel" [(ngModel)]="regUser.password" name="password" id="password" class="form-control rounded-0" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%&])[a-zA-Z0-9@#$%&]{8,}$" required>
+                            <small class="text-danger" [class.d-none]='password.valid || password.touched'>Enter a valid Password</small>
+                        </div>
+                        <button  type="button" [disabled]="userRegister.form.invalid" (click)="registerUser()" class="btn btn-primary">Signup</button>
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

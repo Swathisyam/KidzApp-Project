@@ -1,0 +1,26 @@
+.main{
+    width: 100%;
+    flex-direction:row;
+    display: flex;
+    /* background-color: turquoise; */
+    align-content: center;
+}
+.left{
+    background-color: violet;
+    width: 20%;
+    height: 100%;
+    margin: 5px;
+    padding: 25px;
+    border-radius: 10px;
+}
+.right{
+    background-color: yellowgreen;
+    padding: 25px;
+    padding-top: 1%;
+    /* margin-bottom:80%; */
+    /* margin: auto; */
+    width: 70%;
+    height: 100%;
+    /* margin-left: 30%; */
+    /* border-radius: 10px; */
+}

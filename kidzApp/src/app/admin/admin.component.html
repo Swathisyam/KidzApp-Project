@@ -1,0 +1,57 @@
+<div class="main">
+    <div class="left">
+        <p><a routerLink = "add-number">Add Task</a></p>
+        <!-- <p><a routerLink="phone">View Phone Number</a></p> -->
+    </div>
+
+
+    <div class="right">
+        <router-outlet></router-outlet>
+        <div>
+            <h3 style="text-align: center;"> Numbers</h3>
+        </div>
+        <div class="card">
+            <!-- <div class="card-header" style="font-size: larger; text-align: center;"> 
+                
+            </div> -->
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Numbers</th>
+                                <th>In Words</th>
+                                <th> Display</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr *ngFor='let number of numbers'>
+                               <td>                      
+                                    <img [src] = 'number.numberImageUrl'
+                                    [style.width.px] = 'imageWidth'
+                                    [style.margin.px] = 'imageMargin'>
+                                </td>
+                               <td>{{number.numberWords}}</td>
+                                <td>                           
+                                     <img 
+                                         [src] = 'number.imageUrl'
+                                         [style.width.px] = 'imageWidth'
+                                         [style.margin.px] = 'imageMargin'> 
+                                </td>
+                                <td> <a class="action-btn" [routerLink]="['/edit',number._id]"><i class="material-icons">edit</i></a></td>
+                                <td><a class="action-btn" (click)='RemoveNumber(number._id)'>
+                                    <i class="material-icons">delete</i>
+                                </a>
+                                </td>
+                            </tr>
+                            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="numberItem.numberId" >
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+<!-- [routerLink]="['/edit',number._id]" -->

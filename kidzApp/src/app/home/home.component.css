@@ -1,0 +1,28 @@
+.bg{
+    /* height: max-content; */
+    /* height: 100%; */
+    
+    /* width: max-content; */
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+table,  td 
+{   
+    /* vertical-align: top; */
+    margin-left: 20%;
+    margin-top: 8%;
+    font-weight: 600;
+    /* border: dotted 1px rgb(209, 32, 32); */
+    border-collapse: collapse;
+    padding: 14px 10px;
+    text-align: center;
+}
+table{
+    border: 5px  ;
+    animation: mymove 5s infinite;
+}
+@keyframes mymove {
+    50% {border-color: rgb(97, 247, 105);}
+    50% {box-shadow: 10px 20px 30px rgb(6, 151, 55);}
+  }
